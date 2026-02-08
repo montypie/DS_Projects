@@ -1,0 +1,14 @@
+# Data Visualization in R
+
+This doc shows various data visualizations techniques in R and popular packages like ggplot2.
+
+```{r}
+library(palmerpenguins)
+```
+
+## Part 1
+
+
+```{r}
+penguins
+```
