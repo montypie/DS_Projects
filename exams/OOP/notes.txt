@@ -1,0 +1,8 @@
+1. zou het niet beter zijn de functies uit utils.py in de bestaande classes gebuiken, om bv. id's te genereren, e-mail of isbn te valideren enz.? als we de opdracht mooi volgen, zijn ze enkel via gui's Advanced Features beschikbaar, terwijl er zo goed als geen validatie gebeurt bij het toevogen van members of boeken.
+2. zou generate_id() method rekening moeten houden met de reeds bestaande id's? (momenteel zordt er niets voor dat die echt een "unike" ID genereert en het systeem laat toe om via de gui knop "Generate ID" nieuwe members met bestaande id's toe te voegen)
+3. waarom zijn sommige attributes van Book classe private gemaakt, zoals bv. __publication_year, want nu wordt de setter omzeild?
+4. de code van de matches_search() is hetzelfe zowel in Member als Book class. Zou het niet beter zijn die als concrete method in Searchable, waarvan beiden classes erfen, te implementeren?
+5. is het oke om "isbn" in get_id() method van LibraryItem abstract class te hardcoden, terwijl dit een property in een aparte class is? wat als die hernoemd of weggelaten wordt...
+
+
+
