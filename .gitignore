@@ -11,10 +11,10 @@ data/
 notebooks_orig/
 oplossingen/
 output/
-.zip
-.csv
-.tsv
-.xlsx
+*.zip
+*.csv
+*.tsv
+*.xlsx
 
 # C extensions
 *.so
