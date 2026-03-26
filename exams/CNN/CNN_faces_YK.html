@@ -7526,17 +7526,18 @@ a.anchor-link {
 </ul>
 </li>
 <li><strong>Step 2.</strong> Model creation:<ul>
-<li>Built and trained a CNN model from scratch for face classification.</li>
+<li>Built and trained a CNN model for face classification from scratch.</li>
 <li>Evaluated the trained model on a separate test set.</li>
 <li>Saved the best performing model to Google Drive for re-use.</li>
 </ul>
 </li>
 <li><strong>Steps 3 and 4.</strong> Used model to detect faces on pictures:<ul>
-<li>Implemented a sliding window approach for face detection on arbitrary images, adjusting window sizes, step size, and confidence threshold.</li>
+<li>Implemented a sliding window algorithm for face detection on arbitrary images, adjusting window sizes, step size, and confidence threshold.</li>
 <li>Visualized the results.</li>
 </ul>
 </li>
-<li><strong>Step 5.</strong> Added Non-Maximum Suppression (NMS) algorithm as a post-processing step to remove overlapping detections for the same face and visualized the final results.</li>
+<li><strong>Step 5.</strong> Added Non-Maximum Suppression (NMS) technique as a post-processing step to remove overlapping detections for the same face and visualized the final results.</li>
+<li>Conclusions</li>
 </ul>
 </div>
 </div>
@@ -7546,7 +7547,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">drive</span>
@@ -8647,7 +8648,7 @@ Final Validation Accuracy: 1.0000
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
@@ -8700,7 +8701,7 @@ Final Validation Accuracy: 1.0000
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="c1"># function to cut out sliding windows one by one</span>
@@ -8756,7 +8757,7 @@ Final Validation Accuracy: 1.0000
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">detect_faces</span><span class="p">(</span><span class="n">test_image</span><span class="p">,</span> <span class="n">window_sizes</span><span class="p">,</span> <span class="n">step_ratio</span><span class="o">=</span><span class="mf">0.125</span><span class="p">,</span> <span class="n">confidence_threshold</span><span class="o">=</span><span class="mf">0.97</span><span class="p">):</span>
@@ -8833,7 +8834,7 @@ Final Validation Accuracy: 1.0000
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">visualize_detections</span><span class="p">(</span><span class="n">test_image</span><span class="p">,</span> <span class="n">detected_faces</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
@@ -8871,7 +8872,7 @@ Final Validation Accuracy: 1.0000
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="n">photos_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">img_path</span><span class="p">,</span> <span class="s2">"photos/"</span><span class="p">)</span>
@@ -9521,7 +9522,7 @@ Detected 42 faces with confidence &gt; 0.97.
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">apply_nms</span><span class="p">(</span><span class="n">all_detections</span><span class="p">,</span> <span class="n">iou_threshold</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">confidence_threshold</span><span class="o">=</span><span class="mf">0.97</span><span class="p">):</span>
@@ -9874,7 +9875,7 @@ Detected 68 faces with confidence &gt; 0.97.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Correct! All humans, aliens, and even a borg got recognized as faces. The only one is not detected is the Doctor, which makes perfect sense since he is a hologram. :)</p>
+<p>Correct! All humans, aliens, and even a borg got detected. The only one not identified as a face is the Doctor, which makes perfect sense because he is a hologram. :)</p>
 </div>
 </div>
 </div>
@@ -9894,7 +9895,7 @@ Detected 68 faces with confidence &gt; 0.97.
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="n">test_image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="n">photos</span><span class="p">[</span><span class="s2">"starwars"</span><span class="p">])</span> <span class="c1"># ? faces</span>
@@ -9928,7 +9929,7 @@ Detected 68 faces with confidence &gt; 0.97.
 <span class="c1"># visualize_detections(test_image, all_faces)</span>
 <span class="c1"># plt.title("Before NMS")</span>
 <span class="c1"># plt.show()</span>
-<span class="c1"># final_faces = apply_nms(all_faces, iou_threshold=0.4)</span>
+<span class="c1"># final_faces = apply_nms(all_faces, iou_threshold=0.3)</span>
 <span class="c1"># visualize_detections(test_image, final_faces)</span>
 <span class="c1"># plt.title("After NMS")</span>
 <span class="c1"># plt.show()</span>
@@ -9944,12 +9945,12 @@ Detected 68 faces with confidence &gt; 0.97.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Conclusions-and-reflections:">Conclusions and reflections:<a class="anchor-link" href="#Conclusions-and-reflections:">¶</a></h1><ul>
+<h1 id="Takeaways-and-insights:">Takeaways and insights:<a class="anchor-link" href="#Takeaways-and-insights:">¶</a></h1><ul>
 <li>Based on the overall good performance of my pretty basic CNN, the goodness of the model seems to depend mainly on the training data (both its quantity and versatility). My impression is that the parameters of the model itself (number of layers, activation function, transfer learning or not) have less influence on its goodness.</li>
 <li>Takeaways with respect to the data:<ul>
 <li>The non-faces images should be scaled the same way as faces images (which was not the case here).</li>
 <li>The test images should be different from the training/validation (in this case they were similar).</li>
-<li>A clear definition of what is/isn't a face is also very important (e.g. masks or face-garments, portraits, fantasy characters/creatures, etc.)</li>
+<li>A clear definition of what is/isn't a face is also very important (e.g. rotation angle, masks or face-garments, portraits, fantasy characters/creatures, etc.)</li>
 </ul>
 </li>
 <li>Sliding window detection results vary strongly in function of several parameters, such as:<ul>
